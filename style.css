@@ -1,0 +1,24 @@
+.nav-desktop {
+    border-bottom: 2px solid brown !important;
+    color: brown !important;
+    text-align: center;
+    font-size: xx-large;
+    padding: 5px;
+    font-family: 'Cabin Sketch', cursive;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.card {
+    padding: 5px;
+}
+
+table.table th {
+    color: white;
+    font-family: 'Cabin Sketch', cursive;
+    font-weight: normal;
+}
+
+input.form {
+    width: 50%;
+}

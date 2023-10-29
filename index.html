@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TuneIn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://nispar2009.github.io/spectrum-stylr-beta/light.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="https://nispar2009.github.io/spectrum_stylr/Spectrum.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="nav-desktop">TuneIn</div>
+    </header>
+
+    <p>
+        Welcome to <span style="color: brown; font-family: 'Cabin Sketch', cursive;">TuneIn</span>&mdash;a tool for
+        music composers!
+        Save and listen to all your favorite tunes as a string of alphabets.
+        We have 6 different sounds&mdash;given below.
+    </p>
+    <p><b>Sample:</b> DXBBCXBXXXDXD (<i>Ode to Joy</i>)</p>
+    <p><b>Sample:</b> BXXXXBCXBXXCBXXABXXXXBCXBXXCBXXXBXXXXBCXBXXCBXXABXXXXBCXBXXCB (<i>Varaha Roopam</i>)</p>
+    <p><b>Sample:</b> ABCXBXDXABCXBXDXXXDEDCCXDCB (<i>Angry Birds</i>)</p>
+
+    <div class="card">
+
+        <audio onplay="document.getElementById('tune').value += 'A'" title="A" id="A" controls>
+            <source src="Audio/A.m4a">
+        </audio>
+        <br>
+        <audio onplay="document.getElementById('tune').value += 'B'" title="B" id="B" controls>
+            <source src="Audio/B.m4a">
+        </audio>
+        <br>
+        <audio onplay="document.getElementById('tune').value += 'C'" title="C" id="C" controls>
+            <source src="Audio/C.m4a">
+        </audio>
+        <br>
+        <audio onplay="document.getElementById('tune').value += 'D'" title="D" id="D" controls>
+            <source src="Audio/D.m4a">
+        </audio>
+        <br>
+        <audio onplay="document.getElementById('tune').value += 'E'" title="E" id="E" controls>
+            <source src="Audio/E.m4a">
+        </audio>
+        <br>
+        <audio onplay="document.getElementById('beat').value += 'P'" title="P" id="P" controls>
+            <source src="Audio/P.m4a">
+        </audio>
+        <br>
+        <audio onplay="document.getElementById('beat').value += 'Q'" title="Q" id="Q" controls>
+            <source src="Audio/Q.m4a">
+        </audio>
+        <br>
+        <audio title="X" id="X" controls>
+            <source src="Audio/X.m4a">
+        </audio>
+
+    </div>
+
+    <br><br>
+
+    <h1 class="heading">Tune</h1>
+    <input type="text" id="tune" class="form form-join" placeholder="Enter tune..." onkeyup="verifyTune()"><!-- BBAABXBCCXXDCXXXCBCXBABXBXXCB --><button class="btn btn-form" id="subTune" onclick="playTune()">Play</button>
+
+    <br><br>
+
+    <h1 class="heading">Beat</h1>
+    <input type="text" id="beat" class="form form-join" placeholder="Enter beat..." onkeyup="verifyBeat()"><!-- QXXQQXQXQXQXQXQQPXXPPXPXPXPXP --><button class="btn btn-form" id="subBeat" onclick="playBeat()">Play</button>
+
+    <br><br>
+
+    <button class="btn btn-info" id="subBoth" onclick="playBoth()">Play both</button>
+
+    <div id="audioTune"></div>
+    <div id="audioBeat"></div>
+
+    <script>
+        document.getElementById("A").playbackRate = 9
+        document.getElementById("B").playbackRate = 9
+        document.getElementById("C").playbackRate = 9
+        document.getElementById("D").playbackRate = 9
+        document.getElementById("E").playbackRate = 9
+        document.getElementById("P").playbackRate = 9
+        document.getElementById("Q").playbackRate = 9
+        document.getElementById("X").playbackRate = 9
+    </script>
+</body>
+
+</html>
