@@ -25,72 +25,53 @@
         Save and listen to all your favorite tunes as a string of alphabets.
         We have 8 different sounds&mdash;given below.
     </p>
-    <p><b>Sample:</b> DXBBCXBXXXDXD (<i>Ode to Joy</i>)</p>
+    <p><b>Sample:</b> DXBBCXBXXXCXD (<i>Ode to Joy</i>)</p>
     <p><b>Sample:</b> BXXXXBCXBXXCBXXABXXXXBCXBXXCBXXXBXXXXBCXBXXCBXXABXXXXBCXBXXCB (<i>Varaha Roopam</i>)</p>
-    <p><b>Sample:</b> ABCXBXDXABCXBXDXXXDEDCCXDCB (<i>Angry Birds</i>)</p>
+    <p><b>Sample:</b> BCDXBXEXBCDXBXEXXXEEDCCXDCBXXXXBCDXBXXXCDEXBXXXECCEECCEBEECB (<i>Angry Birds</i>)</p>
 
     <div class="card">
 
         <audio onplay="document.getElementById('tune').value += 'A'" title="A" id="A" controls>
-            <source src="Audio/A.m4a">
+            <source src="Audio/A.wav">
         </audio>
         <br>
         <audio onplay="document.getElementById('tune').value += 'B'" title="B" id="B" controls>
-            <source src="Audio/B.m4a">
+            <source src="Audio/B.wav">
         </audio>
         <br>
         <audio onplay="document.getElementById('tune').value += 'C'" title="C" id="C" controls>
-            <source src="Audio/C.m4a">
+            <source src="Audio/C.wav">
         </audio>
         <br>
         <audio onplay="document.getElementById('tune').value += 'D'" title="D" id="D" controls>
-            <source src="Audio/D.m4a">
+            <source src="Audio/D.wav">
         </audio>
         <br>
         <audio onplay="document.getElementById('tune').value += 'E'" title="E" id="E" controls>
-            <source src="Audio/E.m4a">
+            <source src="Audio/E.wav">
         </audio>
         <br>
-        <audio onplay="document.getElementById('beat').value += 'P'" title="P" id="P" controls>
-            <source src="Audio/P.m4a">
-        </audio>
-        <br>
-        <audio onplay="document.getElementById('beat').value += 'Q'" title="Q" id="Q" controls>
-            <source src="Audio/Q.m4a">
-        </audio>
-        <br>
-        <audio title="X" id="X" controls>
-            <source src="Audio/X.m4a">
+        <audio onplay="document.getElementById('tune').value += 'X'" title="X" id="X" controls>
+            <source src="Audio/X.wav">
         </audio>
 
     </div>
 
     <br><br>
 
-    <h1 class="heading">Tune</h1>
     <input type="text" id="tune" class="form form-join" placeholder="Enter tune..." onkeyup="verifyTune()"><!-- BBAABXBCCXXDCXXXCBCXBABXBXXCB --><button class="btn btn-form" id="subTune" onclick="playTune()">Play</button>
 
-    <br><br>
-
-    <h1 class="heading">Beat</h1>
-    <input type="text" id="beat" class="form form-join" placeholder="Enter beat..." onkeyup="verifyBeat()"><!-- QXXQQXQXQXQXQXQQPXXPPXPXPXPXP --><button class="btn btn-form" id="subBeat" onclick="playBeat()">Play</button>
-
-    <br><br>
-
-    <button class="btn btn-info" id="subBoth" onclick="playBoth()">Play both</button>
-
     <div id="audioTune"></div>
-    <div id="audioBeat"></div>
 
     <script>
-        document.getElementById("A").playbackRate = 9
-        document.getElementById("B").playbackRate = 9
-        document.getElementById("C").playbackRate = 9
-        document.getElementById("D").playbackRate = 9
-        document.getElementById("E").playbackRate = 9
-        document.getElementById("P").playbackRate = 9
-        document.getElementById("Q").playbackRate = 9
-        document.getElementById("X").playbackRate = 9
+        document.getElementById("A").playbackRate = 5
+        document.getElementById("B").playbackRate = 5
+        document.getElementById("C").playbackRate = 5
+        document.getElementById("D").playbackRate = 5
+        document.getElementById("E").playbackRate = 5
+        document.getElementById("P").playbackRate = 5
+        document.getElementById("Q").playbackRate = 5
+        document.getElementById("X").playbackRate = 5
     </script>
 </body>
 
